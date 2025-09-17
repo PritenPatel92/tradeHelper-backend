@@ -1,0 +1,9 @@
+Flask
+Flask[async]
+starlette
+uvicorn
+firebase-admin
+signalrcore==0.9.5
+gevent
+pandas
+pytz
