@@ -12,10 +12,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app
 
 # Ensure scripts are executable
-RUN chmod +x /app/run.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh /app/run.sh
 
 ENV TZ=US/Eastern
 ENV PYTHONUNBUFFERED=1
 
-# Use entrypoint.sh instead of run.sh
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "/app/entrypoint.sh"]
+CMD []
